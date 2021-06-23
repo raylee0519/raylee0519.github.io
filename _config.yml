@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "kr-KOR"
-title                    : "프로그래밍을 하는 소소한 블로그"
+title                    : "Ray의 "
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ray Lee"
-description              : "프로그래밍을 좋아하는 한 대학생입니다."
+description              : "개발자가 되기 위한 한걸음!"
 url                      : "https://RayLee-Kor.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Ray Lee"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "개발자가 되기 위한 한걸음..!"
+  bio              : "프로그래밍을 좋아하는 한 대학생입니다."
   location         : "Seoul, Korea"
   email            :
   links:
