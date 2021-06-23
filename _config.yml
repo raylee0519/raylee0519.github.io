@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "kr-KOR"
-title                    : "Ray의 "
+title                    : "레이의 "
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ray Lee"
