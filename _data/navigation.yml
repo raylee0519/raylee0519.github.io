@@ -10,3 +10,5 @@ main:
     url: /collection-archive/
   - title: "Sitemap - 네이버"
     url: https://www.naver.com/
+    - title: "Categories"
+    url: /categories/
