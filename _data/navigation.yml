@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "참고용 사이트 1"
+    url: https://hahafamilia.github.io/howto/jekyll-github-mistakes-blog/
+  - title: "참고용 사이트 2"
+    url: https://ansohxxn.github.io/blog/jekyll-directory-structure/#navigationyml
+  - title: "About"
+    url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "My Projects"
+    url: /collection-archive/
+  - title: "Sitemap - 네이버"
+    url: https://wwww.naver.com/
