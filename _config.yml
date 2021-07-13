@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "kr-KOR"
-title                    : "Ray's Programming Bank"
+title                    : "게임개발자를 위한 한걸음"
 title_separator          : "-"
 subtitle                 : "2021-06-19~" # site tagline that appears below site title in masthead
 name                     : "Ray Lee"
@@ -26,7 +26,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "게임개발자를 위한 한걸음" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Ray Lee's Progamming Bank" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
