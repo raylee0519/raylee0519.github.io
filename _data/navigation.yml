@@ -8,7 +8,7 @@ main:
     url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "My Projects"
     url: /collection-archive/
-  - title: "Sitemap - 네이버"
+  - title: "Sitemap-naver"
     url: https://www.naver.com/
     - title: "Categories"
     url: /categories/
