@@ -8,17 +8,7 @@ main:
     url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "My Projects"
     url: /collection-archive/
-    children:
-      - title: "Child Link 1"
-        url: /child-1-page-url/
-      - title: "Child Link 2"
-        url: /child-2-page-url/
   - title: "Sitemap - 네이버"
     url: https://www.naver.com/
-    children:
-      - title: "Child Link 1"
-        url: /child-1-page-url/
-      - title: "Child Link 2"
-        url: /child-2-page-url/
     - title: "Categories"
     url: /categories/
