@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "kr-KOR"
 title                    : "Ray's Programming Bank"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "2021-06-19~" # site tagline that appears below site title in masthead
 name                     : "Ray Lee"
 description              : "개발자가 되기 위한 한걸음!"
 url                      : "https://RayLee-Kor.github.io"
@@ -26,7 +26,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "게임개발자를 위한 한걸음" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -96,24 +96,24 @@ analytics:
 author:
   name             : "Ray Lee"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "프로그래밍을 좋아하는 한 대학생입니다."
+  bio              : "게임개발을 꿈꾸는 한 대학생"
   location         : "Seoul, Korea"
-  email            :
+  email            : "wooo519@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "wooo519@email.com"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/RayLee-Kor"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+    - label: "HomePage"
+      icon: "fab fa-fw fa-link"
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
@@ -122,6 +122,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: wooo519@naver.com
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -130,7 +133,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/RayLee-Kor"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -280,3 +283,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# _pages                      : 해당 하단 영역이 새로 추가되었습니다.
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
