@@ -295,5 +295,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-$ bundle exec jekyll serve
