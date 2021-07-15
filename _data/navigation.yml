@@ -5,8 +5,8 @@ main:
   - title: "참고용 사이트 2"
     url: https://ansohxxn.github.io/blog/jekyll-directory-structure/#navigationyml
   - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "My Projects"
-    url: /collection-archive/
+    url: /about/
+  - title: "Category"
+    url: /categories/
   - title: "SiteMap"
     url: https://www.naver.com/
