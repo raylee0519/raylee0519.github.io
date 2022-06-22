@@ -99,7 +99,7 @@ analytics:
 author:
   name             : "Ray Lee"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "코딩 꿈꾸는 한 대학생"
+  bio              : "코딩의 미래를 꿈꾸는 한 대학생"
   location         : "Seoul, Korea"
   email            : "wooo519@naver.com"
   links:
@@ -120,7 +120,7 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/jwlee_05.19/"
 
 # Site Footer
 footer:
@@ -145,7 +145,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: https://www.instagram.com/jwlee_05.19/
 
 
 # Reading Files
