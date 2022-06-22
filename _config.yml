@@ -127,7 +127,7 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: wooo519@naver.com
+      # url: wooo519@naver.com
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -145,7 +145,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: https://www.instagram.com/jwlee_05.19/
+      # url: https://www.instagram.com/jwlee_05.19/
 
 
 # Reading Files
