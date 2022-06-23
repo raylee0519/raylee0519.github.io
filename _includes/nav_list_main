@@ -25,6 +25,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "c_algorithm" %}
+                        <li><a href="/categories/c_algorithm" class="">C언어 알고리즘 구현 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Csharp" %}
                         <li><a href="/categories/Csharp" class="">C# ({{category[1].size}})</a></li>
                     {% endif %}
@@ -33,18 +40,20 @@
         <span class="nav__sub-title">Coding Test</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "c_algorithm" %}
-                        <li><a href="/categories/c_algorithm" class="">C언어 알고리즘 구현 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
                     {% if category[0] == "Programmers" %}
                         <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+          <span class="nav__sub-title">etc</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "etc" %}
+                        <li><a href="/categories/c_algorithm" class="">나에 대한 것 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+          
       </li>
   </ul>
 </nav>
