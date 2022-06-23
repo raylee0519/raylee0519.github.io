@@ -25,8 +25,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "c_algorithm" %}
-                        <li><a href="/categories/c_algorithm" class="">C언어 알고리즘 구현 ({{category[1].size}})</a></li>
+                    {% if category[0] == "C_algorithm" %}
+                        <li><a href="/categories/C_algorithm" class="">C언어 알고리즘 구현 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -49,7 +49,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "etc" %}
-                        <li><a href="/categories/c_algorithm" class="">나에 대한 것 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/etc class="">나에 대한 것 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
