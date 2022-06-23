@@ -20,7 +20,7 @@ title                    : "Ray Lee's Programming Bank"
 title_separator          : "-"
 subtitle                 : "2021-06-19~" # site tagline that appears below site title in masthead
 name                     : "Ray Lee"
-description              : ""
+description              : "나의 발전을 위한 일기"
 url                      : "https://RayLee-Kor.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -44,8 +44,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                : "github-light" #"github-light" (default), "github-dark"
+    issue_term           : "pathname" # "pathname" (default)
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
@@ -98,7 +98,7 @@ analytics:
 # Site Author
 author:
   name             : "Ray Lee"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://user-images.githubusercontent.com/81789003/175251244-7ba29cb1-e858-495f-a9da-727fe0f68683.jpg"
   bio              : "코딩의 미래를 꿈꾸는 한 대학생"
   location         : "Seoul, Korea"
   email            : "wooo519@naver.com"
