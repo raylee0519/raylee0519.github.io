@@ -1,5 +1,5 @@
 ---
-title: "나에 대한 것"
+title: "소소한 알림"
 layout: archive
 permalink: categories/etc
 author_profile: true
