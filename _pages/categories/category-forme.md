@@ -1,7 +1,7 @@
 ---
 title: "소소한 알림"
 layout: archive
-permalink: categories/etc
+permalink: categories/forme
 author_profile: true
 sidebar_main: true
 ---
