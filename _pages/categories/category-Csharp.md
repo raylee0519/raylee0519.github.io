@@ -1,5 +1,5 @@
 ---
-title: "C#"
+title: "C# 프로그래밍 공부"
 layout: archive
 permalink: categories/Csharp
 author_profile: true
