@@ -48,8 +48,8 @@
           <span class="nav__sub-title">etc</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "etc" %}
-                        <li><a href="/categories/etc" class="">나에 대한 것 ({{category[1].size}})</a></li>
+                    {% if category[0] == "forme" %}
+                        <li><a href="/categories/forme" class="">나에 대한 것 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
