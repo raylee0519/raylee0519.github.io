@@ -55,8 +55,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "feeling" %}
-                        <li><a href="/categories/feeling" class="">순간의  ({{category[1].size}})</a></li>
+                    {% if category[0] == "diary" %}
+                        <li><a href="/categories/diary" class="">순간의 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
