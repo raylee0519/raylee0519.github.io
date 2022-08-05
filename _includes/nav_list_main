@@ -53,6 +53,14 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <span class="nav__sub-title">projects</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "C_project1" %}
+                        <li><a href="/categories/C_project1" class="">대학교 C 구현 프로젝트 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
           <span class="nav__sub-title">etc</span>
             <ul>
                 {% for category in site.categories %}
@@ -65,14 +73,6 @@
                 {% for category in site.categories %}
                     {% if category[0] == "diary" %}
                         <li><a href="/categories/diary" class="">순간의 감정({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-          <span class="nav__sub-title">projects</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "C_project1" %}
-                        <li><a href="/categories/C_project1" class="">대학교 C 구현 프로젝트 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
