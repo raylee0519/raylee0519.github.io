@@ -48,7 +48,7 @@
             <span class="nav__sub-title">Web Coding</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "React" %}
+                    {% if category[0] == "eact" %}
                         <li><a href="/categories/react" class="">리액트 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
