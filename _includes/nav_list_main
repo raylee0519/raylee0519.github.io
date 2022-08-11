@@ -45,7 +45,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <span class="nav__sub-title">Web Coding</span>
+            <span class="nav__sub-title">Front-end</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "React" %}
