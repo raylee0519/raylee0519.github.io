@@ -1,5 +1,5 @@
 ---
-title: "대학교 C 구현 프로젝트"
+title: "대학교 C 구현 "
 layout: archive
 permalink: categories/C_project1
 author_profile: true
