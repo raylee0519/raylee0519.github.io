@@ -63,6 +63,13 @@
              <span class="nav__sub-title">Back-end</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Backend" %}
+                        <li><a href="/categories/Backend" class="">백엔드 기초지식 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Springboot" %}
                         <li><a href="/categories/Springboot" class="">Java Springboot ({{category[1].size}})</a></li>
                     {% endif %}
