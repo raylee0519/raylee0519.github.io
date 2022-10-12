@@ -12,7 +12,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
-        <span class="nav__sub-title">C/C++/C#</span>
+        <span class="nav__sub-title"></span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
@@ -25,8 +25,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "C_algorithm" %}
-                        <li><a href="/categories/C_algorithm" class="">C언어 알고리즘 구현 ({{category[1].size}})</a></li>
+                    {% if category[0] == "algorithm" %}
+                        <li><a href="/categories/algorithm" class="">알고리즘({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -68,20 +68,20 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            
-            <span class="nav__sub-title">projects</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "C_project1" %}
-                        <li><a href="/categories/C_project1" class="">대학교 C 구현 프로젝트 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+ 
+ 
           <span class="nav__sub-title">etc</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "forme" %}
                         <li><a href="/categories/forme" class="">소소한 알림 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+             <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "C_project1" %}
+                        <li><a href="/categories/C_project1" class="">대학교 C 구현 프로젝트 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
