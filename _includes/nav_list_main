@@ -70,6 +70,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "GO" %}
+                        <li><a href="/categories/Backend" class="">GO lang ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Springboot" %}
                         <li><a href="/categories/Springboot" class="">Java Springboot ({{category[1].size}})</a></li>
                     {% endif %}
@@ -78,13 +85,6 @@
  
  
           <span class="nav__sub-title">etc</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "C_project1" %}
-                        <li><a href="/categories/C_project1" class="">대학교 C 구현({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "forme" %}
