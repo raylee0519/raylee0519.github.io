@@ -23,17 +23,18 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="">알고리즘({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+            <span class="nav__sub-title">Languages</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Csharp" %}
                         <li><a href="/categories/Csharp" class="">C# ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+             <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "GO" %}
+                        <li><a href="/categories/Backend" class="">GO lang ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -42,6 +43,13 @@
                 {% for category in site.categories %}
                     {% if category[0] == "programmers" %}
                         <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "algorithm" %}
+                        <li><a href="/categories/algorithm" class="">알고리즘 기초({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -58,13 +66,6 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Backend" %}
                         <li><a href="/categories/Backend" class="">백엔드 기초지식 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "GO" %}
-                        <li><a href="/categories/Backend" class="">GO lang ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
