@@ -2,11 +2,7 @@
 main:
   - title: "HOME"
     url: https://raylee-kor.github.io/
-  - title: "참고용 사이트"
-    url: https://ansohxxn.github.io/blog/jekyll-directory-structure/#navigationyml
   - title: "About"
     url: /about/
   - title: "Category"
     url: /categories/
-  - title: "SiteMap"
-    url: https://www.naver.com/
