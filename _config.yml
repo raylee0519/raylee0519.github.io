@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "kr-KOR"
 title                    : "Ray Lee's Programming Bank"
 title_separator          : "-"
-subtitle                 : "2021-06-19~" # site tagline that appears below site title in masthead
+subtitle                 : "과거의 경험이 오늘의 나 자신을 만듭니다." # site tagline that appears below site title in masthead
 name                     : "Ray Lee"
 description              : "나의 발전을 위한 일기"
 url                      : "https://RayLee-Kor.github.io"
@@ -99,7 +99,7 @@ analytics:
 author:
   name             : "Ray Lee"
   avatar           : "https://user-images.githubusercontent.com/81789003/175251244-7ba29cb1-e858-495f-a9da-727fe0f68683.jpg"
-  bio              : "과거의 경험이 오늘의 나 자신을 만듭니다."
+  bio              : "오늘도 새로운 개발 경험과 성장을 갈망하는 한 대학생"
   location         : "Seoul, Korea"
   email            : "wooo519@naver.com"
   links:
