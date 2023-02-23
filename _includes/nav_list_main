@@ -24,13 +24,6 @@
                 {% endfor %}
             </ul>
             <span class="nav__sub-title">Languages</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Csharp" %}
-                        <li><a href="/categories/Csharp" class="">C# ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
              <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "GO" %}
