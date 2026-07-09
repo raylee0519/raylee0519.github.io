@@ -15,18 +15,18 @@
 minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
 
 # Site Settings
-locale                   : "kr-KOR"
-title                    : "Ray Lee"
+locale                   : "en"
+title                    : "Jeong Woo Lee"
 title_separator          : "-"
 # subtitle                 : "" # site tagline that appears below site title in masthead
-name                     : "Ray Lee"
-description              : "Ray Lee의 자기소개 페이지"
-url                      : "https://RayLee-Kor.github.io"
+name                     : "Jeong Woo Lee"
+description              : "Jeong Woo Lee's personal website"
+url                      : "https://raylee0519.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Ray Lee" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Jeong Woo Lee" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -97,18 +97,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ray Lee"
+  name             : "Jeong Woo Lee"
   avatar           : "https://user-images.githubusercontent.com/81789003/175251244-7ba29cb1-e858-495f-a9da-727fe0f68683.jpg"
-  bio              : "오늘도 새로운 개발 경험과 성장을 갈망하는 한 대학생"
+  bio              : "Incoming M.C.S. student at UC Irvine · Undergraduate Research Assistant at ML-Lab, Dongguk University"
   location         : "Seoul, Korea"
-  email            : "wooo519@naver.com"
+  email            : "jwoolee0519@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "wooo519@naver.com"
+      # url: "jwoolee0519@gmail.com"
     - label: "Github"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/RayLee-Kor"
+      url: "https://github.com/raylee0519"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -121,13 +121,16 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/jwlee_05.19/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jwlee0519/"
 
 # Site Footer
 footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: wooo519@naver.com
+      # url: jwoolee0519@gmail.com
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -136,7 +139,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/RayLee-Kor"
+      url: "https://github.com/raylee0519"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
