@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "HOME"
-    url: https://raylee-kor.github.io/
-  - title: "About"
-    url: /about/
-  - title: "Category"
-    url: /categories/
- 
+  - title: "소개"
+    url: /#소개
+  - title: "기술 스택"
+    url: /#기술-스택
+  - title: "프로젝트"
+    url: /#프로젝트
+  - title: "연락처"
+    url: /#연락처
+
