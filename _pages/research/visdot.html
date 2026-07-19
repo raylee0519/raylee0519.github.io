@@ -17,12 +17,17 @@ permalink: /research/visdot/
     <a class="detail-link" href="https://github.com/bongdong22/VisDoTQA" target="_blank" rel="noopener">Code</a>
   </div>
 
+  <p class="research-role">
+    <strong>My role:</strong> proposed grounding the framework in graphical perception theory, designed DoT
+    prompting, and built the VisDoTQA data-generation pipeline; fine-tuned and evaluated the models.
+  </p>
+
   <h2 class="section-title">Problem</h2>
   <p>
-    LVLMs answering questions over charts fail when the question refers to visual attributes — "the leftmost
+    LVLMs answering questions over charts fail when the question refers to visual attributes: "the leftmost
     bar," "the dark red segment." The root cause is a grounding failure: models cannot align visual
     primitives (position, color, length) with what they actually denote in the chart. Chain-of-thought
-    prompting offers limited improvement here, because longer reasoning cannot fix perception — if the model
+    prompting offers limited improvement here, because longer reasoning cannot fix perception: if the model
     is looking at the wrong element, more logic only elaborates on a wrong premise. We diagnosed the
     underlying issue as prior methods treating perception and logic as a single undifferentiated reasoning
     step.
@@ -33,28 +38,29 @@ permalink: /research/visdot/
     VisDoT restructures reasoning so that perception happens explicitly, and before logic.
   </p>
   <p>
-    <strong>Grounded task design.</strong> We formalized four perception tasks — Position, Length, Pattern,
-    and Extract — selected not arbitrarily but from graphical perception theory (Cleveland &amp; McGill,
+    <strong>Grounded task design.</strong> We formalized four perception tasks (Position, Length, Pattern,
+    and Extract), selected not arbitrarily but from graphical perception theory (Cleveland &amp; McGill,
     1984), which ranks how accurately humans decode visual encodings: position is decoded most accurately,
     length next, while angle and area are distortion-prone and were excluded.
   </p>
   <p>
-    <strong>DoT (Decomposition-of-Thought) prompting.</strong> Questions are decomposed into perception
-    sub-questions and logic sub-questions, with perception forced first. For "What is the difference between
-    the leftmost bar and the blue bar?": (1) value of the leftmost bar → 39, (2) value of the blue bar → 24,
-    (3) difference → 15. Unlike CoT, decomposition is triggered only when perceptual cues require it —
-    preventing over-decomposition — and each sub-question localizes the visual element before reasoning over
-    it, cutting off grounding errors at the source.
+    <strong>DoT (Decomposition-of-Thought) prompting.</strong> Adapting the least-to-most decomposition
+    strategy from my earlier table reasoning work (KICS 2025) to the visual domain, DoT decomposes questions
+    into perception sub-questions and logic sub-questions, with perception forced first. For "What is the
+    difference between the leftmost bar and the blue bar?": (1) value of the leftmost bar → 39, (2) value of
+    the blue bar → 24, (3) difference → 15. Unlike CoT, decomposition is triggered only when perceptual cues
+    require it, preventing over-decomposition, and each sub-question localizes the visual element before
+    reasoning over it, cutting off grounding errors at the source.
   </p>
   <p>
-    Using this framework, we built VisDoTQA, a 330K-sample perception-following dataset, and fine-tuned
+    Using this framework, we built VisDoTQA, a 331K-sample perception-following dataset, and fine-tuned
     open-source LVLMs on it.
   </p>
 
   <h2 class="section-title">Results</h2>
   <p>
     +11.2% on ChartQA and +33.2% on VisDoTQA, surpassing GPT-4o (also on ChartQAPro). Most notably, 7.4K
-    training samples outperformed methods trained on 163K–320K (ChartGemma, ECD) — evidence that supervision
+    training samples outperformed methods trained on 163K–320K (ChartGemma, ECD), evidence that supervision
     design, not data volume, is what drives efficiency. Ablations confirmed the perceptual tasks and DoT are
     complementary (3.2× over CoT on VisDoTQA when combined). Zero-shot gains on POPE and MMMU show the
     perception-first principle generalizes beyond charts.
@@ -104,5 +110,10 @@ permalink: /research/visdot/
 .research-page p {
   line-height: 1.75;
   margin: 0 0 1em;
+}
+.research-role {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 2em !important;
 }
 </style>
