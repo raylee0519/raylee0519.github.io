@@ -1,0 +1,114 @@
+---
+layout: single
+title: "VisDoT"
+permalink: /research/visdot/
+---
+
+<div class="research-page">
+
+  <a class="back-link" href="/#research">&larr; Back</a>
+
+  <h1 class="research-page-title">VisDoT: Enhancing Visual Reasoning through Human-Like Interpretation Grounding and Decomposition of Thought</h1>
+
+  <div class="research-page-meta">
+    EACL 2026 Findings
+  </div>
+
+  <div class="research-page-links">
+    <span class="detail-link muted">Paper</span>
+    <span class="detail-link muted">Code</span>
+  </div>
+
+  <h2 class="section-title">Problem</h2>
+  <p>
+    LVLMs answering questions over charts fail when the question refers to visual attributes — "the leftmost
+    bar," "the dark red segment." The root cause is a grounding failure: models cannot align visual
+    primitives (position, color, length) with what they actually denote in the chart. Chain-of-thought
+    prompting offers limited improvement here, because longer reasoning cannot fix perception — if the model
+    is looking at the wrong element, more logic only elaborates on a wrong premise. We diagnosed the
+    underlying issue as prior methods treating perception and logic as a single undifferentiated reasoning
+    step.
+  </p>
+
+  <h2 class="section-title">Approach</h2>
+  <p>
+    VisDoT restructures reasoning so that perception happens explicitly, and before logic.
+  </p>
+  <p>
+    <strong>Grounded task design.</strong> We formalized four perception tasks — Position, Length, Pattern,
+    and Extract — selected not arbitrarily but from graphical perception theory (Cleveland &amp; McGill,
+    1984), which ranks how accurately humans decode visual encodings: position is decoded most accurately,
+    length next, while angle and area are distortion-prone and were excluded.
+  </p>
+  <p>
+    <strong>DoT (Decomposition-of-Thought) prompting.</strong> Questions are decomposed into perception
+    sub-questions and logic sub-questions, with perception forced first. For "What is the difference between
+    the leftmost bar and the blue bar?": (1) value of the leftmost bar → 39, (2) value of the blue bar → 24,
+    (3) difference → 15. Unlike CoT, decomposition is triggered only when perceptual cues require it —
+    preventing over-decomposition — and each sub-question localizes the visual element before reasoning over
+    it, cutting off grounding errors at the source.
+  </p>
+  <p>
+    Using this framework, we built VisDoTQA, a 330K-sample perception-following dataset, and fine-tuned
+    open-source LVLMs on it.
+  </p>
+
+  <h2 class="section-title">Results</h2>
+  <p>
+    +11.2% on ChartQA and +33.2% on VisDoTQA, surpassing GPT-4o (also on ChartQAPro). Most notably, 7.4K
+    training samples outperformed methods trained on 163K–320K (ChartGemma, ECD) — evidence that supervision
+    design, not data volume, is what drives efficiency. Ablations confirmed the perceptual tasks and DoT are
+    complementary (3.2× over CoT on VisDoTQA when combined). Zero-shot gains on POPE and MMMU show the
+    perception-first principle generalizes beyond charts.
+  </p>
+
+</div>
+
+<style>
+#page-title {
+  display: none;
+}
+.research-page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+}
+.research-page-title {
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.6em;
+}
+.research-page-meta {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 0.8em;
+}
+.research-page-links {
+  margin-bottom: 2em;
+}
+.detail-link {
+  margin-right: 1em;
+  font-weight: 600;
+}
+.detail-link.muted {
+  color: #aaa;
+  cursor: default;
+}
+.research-page .section-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #eaeaea;
+}
+.research-page p {
+  line-height: 1.75;
+  margin: 0 0 1em;
+}
+</style>

@@ -1,0 +1,135 @@
+---
+layout: single
+title: "TabBridge"
+permalink: /research/tabbridge/
+---
+
+<div class="research-page">
+
+  <a class="back-link" href="/#research">&larr; Back</a>
+
+  <h1 class="research-page-title">TabBridge: Bridging Structure and Context for Accurate Table Reasoning</h1>
+
+  <div class="research-page-meta">
+    SURGeLLM Workshop at ACL 2026, Best Paper Award
+    <span class="meta-sep">·</span>
+    <span class="detail-link muted">Paper</span>
+    <span class="detail-link muted">Code</span>
+    <span class="detail-link muted">Slides</span>
+  </div>
+
+  <h2 class="section-title">Problem</h2>
+  <p>
+    Text-to-SQL-based table reasoning depends on schema linking: mapping the question's terms to the
+    table's column headers. This fails when the two differ on the surface even while meaning the same
+    thing. If a table's column is named <code>gross</code> but the question asks about earnings, the model
+    anchors on the question's vocabulary and generates SQL over an <code>earnings</code> column that does
+    not exist, producing a query that cannot execute at all. We observed this same failure pattern
+    consistently across multiple models, which pointed away from a model-capability explanation. Our
+    diagnosis: the pipeline itself processes the table's structural information and the question's
+    contextual information separately, so nothing in the design ever forces the two to meet.
+  </p>
+
+  <h2 class="section-title">Approach</h2>
+  <p>
+    The framework draws on Kintsch's Construction–Integration model of human text comprehension, which
+    describes understanding in two phases: first constructing all plausible meaning representations
+    independent of context (reading <em>bank</em>, both "financial institution" and "riverbank" activate),
+    then integrating with context to reinforce the fitting meaning and suppress the rest. TabBridge maps
+    this two-phase structure onto table reasoning.
+  </p>
+  <p>
+    <strong>Stage 1: Structural Encoding.</strong> Without seeing any question, the model interprets the
+    table and encodes its information into TabSpec, a textual specification of the table's structure and
+    semantics. To verify that TabSpec faithfully captures the table, we designed reconstruction-based
+    evaluation: a model regenerates the table from the TabSpec alone, and the reconstruction is scored
+    against the source on Header Exact Match and Cell Similarity. This validates structural fidelity before
+    TabSpec is ever used downstream.
+  </p>
+  <p>
+    <strong>Stage 2: Contextual Reasoning.</strong> Given a question, the model generates SQL grounded in
+    the TabSpec, resolving the question's context to headers that actually exist; earnings now finds
+    <code>gross</code>.
+  </p>
+
+  <h2 class="section-title">Results</h2>
+  <p>
+    73.94% on WikiTableQuestions, a +5.3pp improvement over prior SOTA, where SQL-only approaches reach
+    around 50%. Performance was comparable to SOTA on TabFact and FeTaQA. Across open-source models,
+    TabBridge delivered consistent gains of roughly 10–20%. Since WTQ uses raw, unnormalized tables, the
+    results also indicate the approach handles non-standardized table formats.
+  </p>
+  <p>
+    <strong>Limitations.</strong> Structure–context alignment succeeded, but SQL generation itself remains a
+    bottleneck: cases exist where the correct header is identified yet the generated SQL is still wrong,
+    pointing to SQL generation quality as the next problem.
+  </p>
+
+  <p class="research-note">
+    This work builds on three earlier studies on LLM table interpretation: few-shot prompting with data
+    augmentation (HCLT 2024), least-to-most prompting (KICS 2025), and open- vs. closed-source model
+    comparison (ISIS 2025). The model comparisons from this line of work also led to an open-source tool
+    for running and comparing these approaches directly on local LLMs via Ollama.
+  </p>
+
+</div>
+
+<style>
+#page-title {
+  display: none;
+}
+.research-page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+}
+.research-page-title {
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.6em;
+}
+.research-page-meta {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 2em;
+}
+.meta-sep {
+  margin: 0 0.6em;
+}
+.detail-link {
+  margin-right: 1em;
+  font-weight: 600;
+}
+.detail-link.muted {
+  color: #aaa;
+  cursor: default;
+}
+.research-page code {
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+.research-page .section-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #eaeaea;
+}
+.research-page p {
+  line-height: 1.75;
+  margin: 0 0 1em;
+}
+.research-note {
+  color: #666;
+  font-size: 0.95em;
+  margin-top: 2em;
+}
+</style>

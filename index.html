@@ -80,6 +80,37 @@ permalink: /
     </p>
   </div>
 
+  <h2 class="section-title" id="research">Research</h2>
+
+  <div class="entry research-entry">
+    <div class="entry-row">
+      <span class="entry-title">TabBridge — LLM Table Reasoning</span>
+      <span class="entry-date">Best Paper, SURGeLLM Workshop at ACL 2026</span>
+    </div>
+    <p>
+      Text-to-SQL table reasoning fails when question terms don't match table headers, generating queries
+      over columns that don't exist. TabBridge bridges the table's structure and the question's context
+      through TabSpec, a verified intermediate representation, reaching 73.94% on WikiTableQuestions
+      (+5.3pp over prior SOTA).
+    </p>
+    <a class="read-more" href="/research/tabbridge/">Read more →</a>
+  </div>
+
+  <div class="entry research-entry">
+    <div class="entry-row">
+      <span class="entry-title">VisDoT — VLM Chart Reasoning</span>
+      <span class="entry-date">EACL 2026 Findings</span>
+    </div>
+    <p>
+      LVLMs fail on chart questions with visual referents like "leftmost bar" or "dark red" because they
+      cannot ground visual elements to their meaning — and chain-of-thought doesn't help when the model
+      looks at the wrong place. VisDoT forces perception before logic, decomposing questions into
+      perception-first sub-questions grounded in graphical perception theory, outperforming GPT-4o with
+      20× less training data than prior methods.
+    </p>
+    <a class="read-more" href="/research/visdot/">Read more →</a>
+  </div>
+
   <h2 class="section-title" id="publications">Publications</h2>
 
   <ol class="pub-list">
@@ -240,6 +271,15 @@ permalink: /
 .entry p {
   margin: 0.3em 0 0;
   line-height: 1.6;
+}
+.research-entry p {
+  margin-top: 0.5em;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 0.4em;
+  font-size: 0.95em;
+  font-weight: 600;
 }
 .pub-list {
   padding-left: 1.3em;
